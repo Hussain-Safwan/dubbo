@@ -116,4 +116,13 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>edu.illinois</groupId>
+        <artifactId>nondex-maven-plugin</artifactId>
+        <version>2.1.7</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
