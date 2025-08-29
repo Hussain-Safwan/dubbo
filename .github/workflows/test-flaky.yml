@@ -1,4 +1,4 @@
-name: Maven Build and Test
+name: Run test_getMethodNames_ContainExtendsParentMethods
 
 on:
   push:
