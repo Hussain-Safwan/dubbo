@@ -1,6 +1,7 @@
 name: Run test_getMethodNames_ContainExtendsParentMethods
 
 on:
+  work_dispatch:
   push:
     branches: 
       - flaky-test-fixed
