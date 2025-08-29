@@ -25,6 +25,9 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
+
+    - name: Install Nondex
+      run: mvn org.apache.maven.plugins:maven-dependency-plugin:get -Dartifact=edu.illinois:nondex-maven-plugin:2.1.7
         
     - name: Run test
-      run: mvn -pl dubbo-common test -Dtest=org.apache.dubbo.common.bytecode.WrapperTest#test_getMethodNames_ContainExtendsParentMethods
+      run: mvn -pl dubbo-common edu.illinois:nondex-maven-plugin:2.1.7 -Dtest=org.apache.dubbo.common.bytecode.WrapperTest#test_getMethodNames_ContainExtendsParentMethods
