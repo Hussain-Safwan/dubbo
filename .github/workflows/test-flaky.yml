@@ -28,6 +28,9 @@ jobs:
 
     - name: Install Nondex
       run: mvn org.apache.maven.plugins:maven-dependency-plugin:get -Dartifact=edu.illinois:nondex-maven-plugin:2.1.7
+
+    - name: Run test without Nondex
+      run: mvn -pl dubbo-common test -Dtest=org.apache.dubbo.common.bytecode.WrapperTest#test_getMethodNames_ContainExtendsParentMethods
         
-    - name: Run test
+    - name: Run test with Nondex
       run: mvn -pl dubbo-common edu.illinois:nondex-maven-plugin:2.1.7:nondex -Dtest=org.apache.dubbo.common.bytecode.WrapperTest#test_getMethodNames_ContainExtendsParentMethods
